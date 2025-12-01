@@ -1,0 +1,381 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  font-family: 'Playfair Display', serif;
+  background-color: #f9fafa;
+  background: linear-gradient(135deg,#e6f4ff,#e8f5ff 64%,#f6e7ff);
+}
+
+:root {
+  --background-main-color: #616161;
+  --background-secundary-color: #F7F8FC ;
+  --main-color: #d4af37;
+  --secundary-color: #a12332;
+}
+
+h2{ 
+  font-size: 3em;
+  }
+h3 {
+   font-size: 3.5em;
+}
+h4 { 
+  font-family: 'Crimson Text', cursive;
+  font-size: 1.25em;
+  color: var(--main-color);
+}
+p{ font-size: 1.25em;}
+ul{ list-style: none;}
+li{ font-size: 0.85em;}
+hr{
+  border: dashed;
+  border-width: 1px;
+  border-color: rgba(0,0,0,0.2);
+}
+
+header{
+  position: sticky;
+  top: 0;
+  background: rgba(255, 255, 255, .8);
+  backdrop-filter: blur(10px);
+  width: 100%;
+  border-bottom: solid 2px rgba(0, 0, 0, 0.1);
+  padding: 15px 0px 10px 0;
+  transition: 1s;
+}
+
+header:hover {
+  background: rgba(255, 255, 255, 1);
+  transition: .5s;
+}
+
+header .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+header img {
+  object-fit: cover;
+}
+
+header .encabezado {
+  font-family: 'Crimson Text';
+  font-style: italic;
+  font-size: 1.3em;
+}
+
+.encabezado i {
+  padding-right: 10px;
+  font-size: 1.75em;
+}
+
+header a {
+  margin: 0px 15px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #3c3f40;
+  font-size: 0.8em;
+  transition: .3s;
+}
+
+header a:hover {
+  color: var(--secundary-color);
+}
+
+nav {
+  color: #3c3f40;
+  /* content-visibility: hidden; */
+}
+
+nav .container {
+  width: auto;
+  display: flex;
+  justify-content: center;
+}
+
+nav .active {
+  color: var(--secundary-color);
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #3c3f40;
+  font-size: 1em;
+  transition: .3s;
+}
+
+nav a:hover {
+  color: var(--secundary-color);
+}
+
+nav hr {
+  border-color: #3c3f40;
+  margin: 10px 15px;
+}
+
+nav .search {
+  font-size: 1.35em;
+  margin-left: 25px;
+}
+
+#mapa {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.container-form {
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 100px;
+  margin-top: 90px;
+  margin-bottom: 50px;
+}
+
+.container-form svg {
+  width: 25px;
+  height: 25px;
+}
+
+.container-form h2 {
+  margin-bottom: 15px;
+  font-size: 35px;
+  color: white;
+}
+
+.container-form p {
+  font-size: 17px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.container-form a {
+  font-size: 17px;
+  display: inline-block;
+  text-decoration: none;
+  width: 100%;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.svg {
+  color: white
+}
+
+.container-form form .campo,
+textarea {
+  width: 100%;
+  padding: 15px 10px;
+  font-size: 15px;
+  border: 1px solid #a25656;
+  margin-bottom: 26px;
+  border-radius: 3px;
+  outline: 0px;
+}
+
+.container-form form textarea {
+  max-width: 530%;
+  max-width: 530px;
+  min-height: 140px;
+  min-height: 150px;
+}
+
+.container-form .btn-enviar {
+  padding: 15px;
+  font-size: 16px;
+  border: none;
+  outline: 0px;
+  background: #a12332;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+
+.container-form .btn-enviar:hover {
+  color: white;
+  background-color: #d4af37;
+  transform: scale(1.05);
+}
+
+.info-form {
+  background-image: url(https://media.istockphoto.com/id/1066470250/es/v%C3%ADdeo/primer-plano-macro-disparo-de-m%C3%A1quina-de-la-f%C3%A1brica-electr%C3%B3nica-en-el-trabajo-placa-de.jpg?s=640x640&k=20&c=55UJsJPqJMc5d2OSUsI6qZ7B_NrHsrLy7ZpATKXwN8U=);
+  background-size: cover;
+  width: 100%;
+  height: 85%;
+  background-repeat: no-repeat;
+  padding: 20px;
+}
+
+#final {
+  background: linear-gradient(279.85deg, #fcf9eb, #f6e7d7 99.48%);
+}
+
+#final .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#final .logo {
+  padding: 65px 0;
+}
+
+#final .lista-final {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+  gap: 100px;
+}
+
+#final ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+#final li {
+  padding: 10px 0;
+}
+
+#final .lista {
+  color: #3c3f40;
+  font-size: 1em;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+#final a {
+  position: relative;
+  text-decoration: none;
+  font-size: 1.1em;
+  color: #3c3f40;
+  font-weight: 600;
+}
+
+#final a:hover {
+  color: #000;
+}
+
+#final a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #ff7a00, #ff0f00);
+  transition: .25s ease-out;
+}
+
+#final a:hover::after {
+  left: 0;
+  width: 100%;
+}
+
+#redes {
+  background: linear-gradient(279.85deg, #fcf9eb, #f6e7d7 99.48%);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 0 40px 466px;
+}
+
+#redes a {
+  font-size: 1.25em;
+  margin: 8px;
+  color: #3c3f40;
+}
+
+#redes a:hover {
+  transform: scale(1.2);
+}
+
+#link-wsp {
+  background: linear-gradient(279.85deg, #fcf9eb, #f6e7d7 99.48%);
+}
+
+#link-wsp .container {
+  padding-bottom: none;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.button-footer {
+  width: 90%;
+  padding: 10px 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#link-wsp a {
+  color: #3c3f40;
+  text-decoration: none;
+  font-size: 1.5em;
+  font-weight: 400;
+  padding: 0px 18px;
+}
+
+#link-wsp button {
+  background-color: #621f1f1f;
+  border-color: #3c3f40;
+  transition: .5s;
+}
+
+#link-wsp button:hover {
+  background: rgba(255, 255, 255, .3);
+  transition: .5s;
+}
+
+.button-wsp {
+  font-family: 'Lato', sans-serif;
+  padding: 5px 0;
+  font-size: .65em;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-wsp .uil-whatsapp {
+  font-size: 1.5em;
+  margin-right: 8px;
+}
+
+.button-to-top {
+  font-size: 1em;
+}
+
+#link-wsp .derechos {
+  text-align: center;
+  padding-top: 20px;
+  color: #3c3f40;
+  padding-bottom: 20px;
+}
+
+.redes :hover {
+  transform: scale(1.2);
+}
