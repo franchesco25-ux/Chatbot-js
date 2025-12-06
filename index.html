@@ -28,7 +28,7 @@
         </div>
       </nav>
       <div class="encabezado">
-        <a href="registro.html"><i class="uil uil-user-circle"></i>Mi cuenta</a>
+        <a href="registro.html" id="cuenta-link"><i class="uil uil-user-circle"></i>Mi cuenta</a>
       </div>
     </div>
   </header>
@@ -255,6 +255,30 @@
     </div>
 </div>
 <script src="chatbot.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const cuentaLink = document.getElementById('cuenta-link');
+      const datosUsuario = localStorage.getItem('usuario');
+
+      if (datosUsuario) {
+        const usuario = JSON.parse(datosUsuario);
+        // Cambia el contenido del enlace "Mi Cuenta"
+        cuentaLink.innerHTML = `
+          <i class="uil uil-user-check"></i>Hola, ${usuario.nombreUsuario}
+          <a href="#" id="logout-link" style="font-size: 0.8em; margin-left: 15px; text-decoration: underline;">(Cerrar sesión)</a>
+        `;
+        cuentaLink.href = '#'; // Evita que redirija a registro.html
+
+        // Añade la funcionalidad de cerrar sesión
+        document.getElementById('logout-link').addEventListener('click', (e) => {
+          e.preventDefault();
+          localStorage.removeItem('usuario'); // Limpia los datos del usuario
+          window.location.reload(); // Recarga la página para volver al estado inicial
+        });
+      }
+    });
+  </script>
 
   <footer>
     <div id="final">

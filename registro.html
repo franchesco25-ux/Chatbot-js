@@ -84,29 +84,33 @@
               <div class="container-cuenta">
                 <div class="form">
                   <h2>Registrarse</h2>
-                  <form>
+                  <form id="registroForm">
                     <div class="inputBox">
-                      <input type="email" placeholder="Correo electrónico">
+                      <input type="text" name="nombre" placeholder="Nombre de usuario" required>
                     </div>
                     <div class="inputBox">
-                      <input type="password" placeholder="Contraseña">
+                      <input type="email" name="email" placeholder="Correo electrónico" required>
+                    </div>
+                    <div class="inputBox">
+                      <input type="password" name="password" placeholder="Contraseña" required>
                     </div>
                     <div class="inputBox">
                       <input type="number" placeholder="Teléfono">
                     </div>
                     <div class="inputBox">
-                      <select name="indentidad" id="" required="required">
+                      <select name="identidad">
                         <option value="_none">Seleccione un valor</option>
                         <option value="dni">DNI</option>
                         <option value="carnet">Carnet de extranjería</option>
                       </select>
                     </div>
                     <div class="inputBox">
-                      <input type="number" placeholder="Documento">
+                      <input type="number" placeholder="Documento" >
                     </div>
                     <div class="inputBox">
                       <input type="submit" value="Crear cuenta">
                     </div>
+                    <p id="registroMensaje" style="text-align: center; margin-bottom: 15px;"></p>
                     <p>También puedes registrarte con:</p>
                     <div class="redes">
                       <a href="https://mail.google.com/" target="_blank"><i class="uil uil-google"></i></a>
@@ -134,16 +138,17 @@
                 <img src="inicio/media/iconoElectro.png" alt="">
                 <div class="form">
                   <h2>Inicia sesión</h2>
-                  <form>
+                  <form id="loginForm">
                     <div class="inputBox">
-                      <input type="text" placeholder="Usuario">
+                      <input type="email" name="email" placeholder="Correo electrónico" required>
                     </div>
                     <div class="inputBox">
-                      <input type="password" placeholder="Contraseña">
+                      <input type="password" name="password" placeholder="Contraseña" required>
                     </div>
                     <div class="inputBox">
                       <input type="submit" value="Iniciar sesión">
                     </div>
+                    <p id="loginMensaje" style="text-align: center; margin-bottom: 15px;"></p>
                     <p>También puedes iniciar sesión con:</p>
                     <div class="redes">
                       <a href="https://mail.google.com/" target="_blank"><i class="uil uil-google"></i></a>
@@ -212,6 +217,89 @@
     </div>
   </footer>
 
+  <script>
+    // --- Lógica para el formulario de REGISTRO ---
+    document.getElementById('registroForm').addEventListener('submit', async (event) => {
+      event.preventDefault(); // Evita que el formulario se envíe de la forma tradicional
+
+      const form = event.target;
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData.entries());
+      const mensajeEl = document.getElementById('registroMensaje');
+
+      try {
+        const response = await fetch('http://localhost:3000/api/register', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
+        });
+
+        const result = await response.json();
+
+        if (response.ok) {
+          mensajeEl.style.color = 'lightgreen';
+          mensajeEl.textContent = result.message + ' Redirigiendo a inicio de sesión...';
+          form.reset();
+          // Espera 2 segundos y cambia al slide de iniciar sesión
+          setTimeout(() => {
+            window.location.hash = 'iniciar-sesion';
+            mensajeEl.textContent = '';
+          }, 2000);
+        } else {
+          mensajeEl.style.color = 'orangered';
+          mensajeEl.textContent = 'Error: ' + result.message;
+        }
+      } catch (error) {
+        console.error('Error de conexión:', error);
+        mensajeEl.style.color = 'orangered';
+        mensajeEl.textContent = 'No se pudo conectar con el servidor.';
+      }
+    });
+
+    // --- Lógica para el formulario de LOGIN ---
+    document.getElementById('loginForm').addEventListener('submit', async (event) => {
+      event.preventDefault();
+
+      const form = event.target;
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData.entries());
+      const mensajeEl = document.getElementById('loginMensaje');
+
+      try {
+        const response = await fetch('http://localhost:3000/api/login', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
+        });
+
+        const result = await response.json();
+
+        if (response.ok) {
+            mensajeEl.style.color = 'lightgreen';
+            mensajeEl.textContent = result.message + ' Redirigiendo...';
+
+            // 1. Guardar la información del usuario en el almacenamiento local del navegador
+            localStorage.setItem('usuario', JSON.stringify({ nombreUsuario: result.nombreUsuario }));
+
+            // 2. Redirigir a la página principal después de 1.5 segundos
+            setTimeout(() => {
+                window.location.href = 'index.html';
+            }, 1500);
+        } else {
+          mensajeEl.style.color = 'orangered';
+          mensajeEl.textContent = 'Error: ' + result.message;
+        }
+      } catch (error) {
+        console.error('Error de conexión:', error);
+        mensajeEl.style.color = 'orangered';
+        mensajeEl.textContent = 'No se pudo conectar con el servidor.';
+      }
+    });
+  </script>
 </body>
 
 </html>
