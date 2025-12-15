@@ -9,6 +9,7 @@
     href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/solid.css">
   <link rel="stylesheet" href="inicio/index.css">
 </head>
 
@@ -93,43 +94,67 @@
         <article class="destacados">
           <div class="carta">
             <img src="inicio/media/productos/licuadora.png" alt="licuadora">
+            <i class="uil uil-heart fav-icon" onclick="toggleFavorite(1)"></i>
             <div class="capa">
               <button class="button-main">DETALLES</button>
-              <button class="button-main">AÑADIR AL CARRITO</button>
+              <button class="button-main" onclick="addToCartFromCard(1)">AÑADIR AL CARRITO</button>
+              <div class="qty-selector">
+                <button class="qty-btn-card" onclick="changeCardQty(1, -1)">-</button>
+                <span id="qty-1" class="qty-val-card">1</span>
+                <button class="qty-btn-card" onclick="changeCardQty(1, 1)">+</button>
+              </div>
             </div>
             <h4>Licuadora Oster<br><span class="color-precio">S/600</span></h4>
           </div>
 
           <div class="carta">
             <img src="inicio/media/productos/televisor1.png" alt="televisor1">
+            <i class="uil uil-heart fav-icon" onclick="toggleFavorite(2)"></i>
             <div class="capa">
               <button class="button-main">DETALLES</button>
-              <button class="button-main">AÑADIR AL CARRITO</button>
+              <button class="button-main" onclick="addToCartFromCard(2)">AÑADIR AL CARRITO</button>
+              <div class="qty-selector">
+                <button class="qty-btn-card" onclick="changeCardQty(2, -1)">-</button>
+                <span id="qty-2" class="qty-val-card">1</span>
+                <button class="qty-btn-card" onclick="changeCardQty(2, 1)">+</button>
+              </div>
             </div>
             <h4>Televisor Hisense<br><span class="color-precio">S/1,200</span></h4>
           </div>
 
           <div class="carta">
             <img src="inicio/media/productos/ventilador1.png" alt="ventilador1">
+            <i class="uil uil-heart fav-icon" onclick="toggleFavorite(3)"></i>
             <div class="capa">
               <button class="button-main">DETALLES</button>
-              <button class="button-main">AÑADIR AL CARRITO</button>
+              <button class="button-main" onclick="addToCartFromCard(3)">AÑADIR AL CARRITO</button>
+              <div class="qty-selector">
+                <button class="qty-btn-card" onclick="changeCardQty(3, -1)">-</button>
+                <span id="qty-3" class="qty-val-card">1</span>
+                <button class="qty-btn-card" onclick="changeCardQty(3, 1)">+</button>
+              </div>
             </div>
             <h4>Ventilador Imaco<br><span class="color-precio">S/200.50</span></h4>
           </div>
 
           <div class="carta">
             <img src="inicio/media/productos/cafetera1.png" alt="cafetera1">
+            <i class="uil uil-heart fav-icon" onclick="toggleFavorite(4)"></i>
             <div class="capa">
               <button class="button-main">DETALLES</button>
-              <button class="button-main">AÑADIR AL CARRITO</button>
+              <button class="button-main" onclick="addToCartFromCard(4)">AÑADIR AL CARRITO</button>
+              <div class="qty-selector">
+                <button class="qty-btn-card" onclick="changeCardQty(4, -1)">-</button>
+                <span id="qty-4" class="qty-val-card">1</span>
+                <button class="qty-btn-card" onclick="changeCardQty(4, 1)">+</button>
+              </div>
             </div>
             <h4>Cafetera Bosch<br><span class="color-precio">S/119.40</span></h4>
           </div>
-          
+
         </article>
       </div>
-      <button class="button-main mas-vinos">MÁS PRODUCTOS</button>
+      <button class="button-main mas-vinos" onclick="location.href='tienda.html'">MÁS PRODUCTOS</button>
     </div>
   </section>
 
@@ -144,9 +169,15 @@
         <article class="promociones">
           <div class="carta">
             <img src="inicio/media/productos/cocina1.png" alt="cocina1">
+            <i class="uil uil-heart fav-icon" onclick="toggleFavorite(5)"></i>
             <div class="capa">
               <button class="button-main">DETALLES</button>
-              <button class="button-main">AÑADIR AL CARRITO</button>
+              <button class="button-main" onclick="addToCartFromCard(5)">AÑADIR AL CARRITO</button>
+              <div class="qty-selector">
+                <button class="qty-btn-card" onclick="changeCardQty(5, -1)">-</button>
+                <span id="qty-5" class="qty-val-card">1</span>
+                <button class="qty-btn-card" onclick="changeCardQty(5, 1)">+</button>
+              </div>
             </div>
             <h4>Cocina Indurama<br><span class="color-precio">S/800.29</span><span class="color-oferta">S/999.10</span>
             </h4>
@@ -154,9 +185,15 @@
 
           <div class="carta">
             <img src="inicio/media/productos/aspiradora1.png" alt="aspiradora1">
+            <i class="uil uil-heart fav-icon" onclick="toggleFavorite(6)"></i>
             <div class="capa">
               <button class="button-main">DETALLES</button>
-              <button class="button-main">AÑADIR AL CARRITO</button>
+              <button class="button-main" onclick="addToCartFromCard(6)">AÑADIR AL CARRITO</button>
+              <div class="qty-selector">
+                <button class="qty-btn-card" onclick="changeCardQty(6, -1)">-</button>
+                <span id="qty-6" class="qty-val-card">1</span>
+                <button class="qty-btn-card" onclick="changeCardQty(6, 1)">+</button>
+              </div>
             </div>
             <h4>Aspiradora Bosch<br><span class="color-precio">S/350</span><span class="color-oferta">S/475</span>
             </h4>
@@ -164,9 +201,15 @@
 
           <div class="carta">
             <img src="inicio/media/productos/refrigeradora1.png" alt="refrigeradora1">
+            <i class="uil uil-heart fav-icon" onclick="toggleFavorite(7)"></i>
             <div class="capa">
               <button class="button-main">DETALLES</button>
-              <button class="button-main">AÑADIR AL CARRITO</button>
+              <button class="button-main" onclick="addToCartFromCard(7)">AÑADIR AL CARRITO</button>
+              <div class="qty-selector">
+                <button class="qty-btn-card" onclick="changeCardQty(7, -1)">-</button>
+                <span id="qty-7" class="qty-val-card">1</span>
+                <button class="qty-btn-card" onclick="changeCardQty(7, 1)">+</button>
+              </div>
             </div>
             <h4>Refrigeradora Mabe<br><span class="color-precio">S/1,100</span><span class="color-oferta">S/2,800</span>
             </h4>
@@ -174,9 +217,15 @@
 
           <div class="carta">
             <img src="inicio/media/productos/ventilador.png" alt="Ventilador">
+            <i class="uil uil-heart fav-icon" onclick="toggleFavorite(8)"></i>
             <div class="capa">
               <button class="button-main">DETALLES</button>
-              <button class="button-main">AÑADIR AL CARRITO</button>
+              <button class="button-main" onclick="addToCartFromCard(8)">AÑADIR AL CARRITO</button>
+              <div class="qty-selector">
+                <button class="qty-btn-card" onclick="changeCardQty(8, -1)">-</button>
+                <span id="qty-8" class="qty-val-card">1</span>
+                <button class="qty-btn-card" onclick="changeCardQty(8, 1)">+</button>
+              </div>
             </div>
             <h4>Ventilador Oster<br><span class="color-precio">S/150.30</span><span class="color-oferta">S/247</span>
             </h4>
@@ -231,18 +280,19 @@
     </div>
   </section>
 
-</div> <!--parte del chatbot --> 
-<div id="chatbot-button">
+  </div> <!--parte del chatbot -->
+  <div id="chatbot-button">
     <img src="inicio/media/galeria-inicio/electrobot.png" class="chatbot-icon">
-</div>
-<!-- Ventana del chatbot -->
-<div class="chatbot-container" id="chatbot-container">
+  </div>
+  <!-- Ventana del chatbot -->
+  <div class="chatbot-container" id="chatbot-container">
 
     <div class="chat-header">
-       <img src="inicio/media/" class="chat-logo">
+      <div style="display:flex; align-items:center; gap:10px;">
+        <img src="inicio/media/galeria-inicio/electrobot.png" class="chat-logo" alt="logo">
         <span>ElectroBot</span>
-
-        <button class="close-chat" onclick="toggleChat()">✖</button>
+      </div>
+      <button class="close-chat" onclick="toggleChat()">✖</button>
     </div>
 
     <button class="clear-btn" onclick="clearChat()">🔄 Nueva consulta</button>
@@ -250,11 +300,45 @@
     <div class="chat-body" id="chat-body"></div>
 
     <div class="chat-input">
-        <input type="text" id="user-input" placeholder="Escribe tu pregunta...">
-        <button onclick="sendMessage()">Enviar</button>
+      <input type="text" id="user-input" placeholder="Escribe tu pregunta...">
+      <button onclick="sendMessage()">Enviar</button>
     </div>
-</div>
-<script src="chatbot.js"></script>
+  </div>
+  <!-- Overlay del Carrito -->
+  <div class="cart-overlay" id="cart-overlay" onclick="toggleCart()"></div>
+
+  <!-- Sidebar del Carrito -->
+  <div id="cart-sidebar">
+    <div class="cart-header">
+      <h3>Mi Carrito</h3>
+      <button class="close-cart" onclick="toggleCart()">×</button>
+    </div>
+    <div class="cart-items" id="cart-items-container">
+      <p style="text-align:center; padding:20px; color:#666;">Tu carrito está vacío.</p>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total:</span>
+        <span id="cart-total-price">S/0.00</span>
+      </div>
+      <button class="checkout-btn"
+        onclick="addMessage('ElectroBot', '¡El pago estará disponible pronto!', 'bot'); toggleCart();">PAGAR
+        AHORA</button>
+    </div>
+  </div>
+
+  <!-- Botón Flotante del Carrito -->
+  <div id="cart-icon-float" onclick="toggleCart()">
+    <i class="uil uil-shopping-cart"></i>
+    <span class="cart-badge" id="cart-badge">0</span>
+  </div>
+
+  <script src="chatBot_Modulos/productos.js"></script>
+  <script src="chatBot_Modulos/carrito.js"></script>
+  <script src="chatBot_Modulos/favoritos.js"></script>
+  <script src="chatBot_Modulos/comparador.js"></script>
+  <script src="chatBot_Modulos/chat_interfaz.js"></script>
+  <script src="chatBot_Modulos/chat_logica.js"></script>
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
@@ -329,7 +413,7 @@
         <div class="derechos">
           <h5>&copy; Electrotec, todos los derechos reservados.</h5>
         </div>
-</div>
+      </div>
     </div>
   </footer>
 </body>
