@@ -11,6 +11,7 @@
     href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/solid.css">
 </head>
 
 <body>
@@ -34,7 +35,7 @@
     </div>
   </header>
 
- 
+
 
   <section id="vinos-destacados">
     <div class="container">
@@ -43,135 +44,230 @@
         <article class="destacados">
           <div class="carta">
             <img src="inicio/media/productos/cocina2.png" alt="cocina2">
+            <i class="uil uil-heart fav-icon" onclick="toggleFavorite(9)"></i>
             <div class="capa">
               <button class="button-main">DETALLES</button>
-              <button class="button-main">AÑADIR AL CARRITO</button>
+              <button class="button-main" onclick="addToCartFromCard(9)">AÑADIR AL CARRITO</button>
+              <div class="qty-selector">
+                <button class="qty-btn-card" onclick="changeCardQty(9, -1)">-</button>
+                <span id="qty-9" class="qty-val-card">1</span>
+                <button class="qty-btn-card" onclick="changeCardQty(9, 1)">+</button>
+              </div>
             </div>
             <h4>Cocina Mabe<br><span class="color-precio">S/2300</span></h4>
           </div>
 
           <div class="carta">
             <img src="inicio/media/productos/licuadora2.png" alt="licuadora2">
+            <i class="uil uil-heart fav-icon" onclick="toggleFavorite(10)"></i>
             <div class="capa">
               <button class="button-main">DETALLES</button>
-              <button class="button-main">AÑADIR AL CARRITO</button>
+              <button class="button-main" onclick="addToCartFromCard(10)">AÑADIR AL CARRITO</button>
+              <div class="qty-selector">
+                <button class="qty-btn-card" onclick="changeCardQty(10, -1)">-</button>
+                <span id="qty-10" class="qty-val-card">1</span>
+                <button class="qty-btn-card" onclick="changeCardQty(10, 1)">+</button>
+              </div>
             </div>
             <h4>Licuadora Philips<br><span class="color-precio">S/259</span></h4>
           </div>
 
           <div class="carta">
             <img src="inicio/media/productos/refrigeradora1.png" alt="refrigeradora1">
+            <i class="uil uil-heart fav-icon" onclick="toggleFavorite(11)"></i>
             <div class="capa">
               <button class="button-main">DETALLES</button>
-              <button class="button-main">AÑADIR AL CARRITO</button>
+              <button class="button-main" onclick="addToCartFromCard(11)">AÑADIR AL CARRITO</button>
+              <div class="qty-selector">
+                <button class="qty-btn-card" onclick="changeCardQty(11, -1)">-</button>
+                <span id="qty-11" class="qty-val-card">1</span>
+                <button class="qty-btn-card" onclick="changeCardQty(11, 1)">+</button>
+              </div>
             </div>
             <h4>Refrigeradora LG<br><span class="color-precio">S/3500</span></h4>
           </div>
 
           <div class="carta">
             <img src="inicio/media/productos/ventilador1.png" alt="ventilador1">
+            <i class="uil uil-heart fav-icon" onclick="toggleFavorite(12)"></i>
             <div class="capa">
               <button class="button-main">DETALLES</button>
-              <button class="button-main">AÑADIR AL CARRITO</button>
+              <button class="button-main" onclick="addToCartFromCard(12)">AÑADIR AL CARRITO</button>
+              <div class="qty-selector">
+                <button class="qty-btn-card" onclick="changeCardQty(12, -1)">-</button>
+                <span id="qty-12" class="qty-val-card">1</span>
+                <button class="qty-btn-card" onclick="changeCardQty(12, 1)">+</button>
+              </div>
             </div>
             <h4>Ventilador Panasonic<br><span class="color-precio">S/280</span></h4>
           </div>
 
           <div class="carta">
             <img src="inicio/media/productos/aspiradora1.png" alt="aspiradora1">
+            <i class="uil uil-heart fav-icon" onclick="toggleFavorite(13)"></i>
             <div class="capa">
               <button class="button-main">DETALLES</button>
-              <button class="button-main">AÑADIR AL CARRITO</button>
+              <button class="button-main" onclick="addToCartFromCard(13)">AÑADIR AL CARRITO</button>
+              <div class="qty-selector">
+                <button class="qty-btn-card" onclick="changeCardQty(13, -1)">-</button>
+                <span id="qty-13" class="qty-val-card">1</span>
+                <button class="qty-btn-card" onclick="changeCardQty(13, 1)">+</button>
+              </div>
             </div>
             <h4>aspiradora Imaco<br><span class="color-precio">S/195</span></h4>
           </div>
 
           <div class="carta">
             <img src="inicio/media/productos/aspiradora1.png" alt="Aspiradora1">
+            <i class="uil uil-heart fav-icon" onclick="toggleFavorite(6)"></i>
+            <!-- Assuming ID 6 is Aspiradora Bosch/Taurus, waiting for JSON check, actually JSON ID 6 is Bosch, ID 9 is Mabe, 13 Imaco. Need to be careful. -->
+            <i class="uil uil-heart fav-icon" onclick="toggleFavorite(15)"></i>
             <div class="capa">
               <button class="button-main">DETALLES</button>
-              <button class="button-main">AÑADIR AL CARRITO</button>
+              <button class="button-main" onclick="addToCartFromCard(15)">AÑADIR AL CARRITO</button>
+              <div class="qty-selector">
+                <button class="qty-btn-card" onclick="changeCardQty(15, -1)">-</button>
+                <span id="qty-15" class="qty-val-card">1</span>
+                <button class="qty-btn-card" onclick="changeCardQty(15, 1)">+</button>
+              </div>
             </div>
             <h4>Aspiradora Taurus<br><span class="color-precio">S/330</span></h4>
           </div>
 
           <div class="carta">
             <img src="inicio/media/productos/cafetera1.png" alt="cafetera1">
+            <i class="uil uil-heart fav-icon" onclick="toggleFavorite(4)"></i>
             <div class="capa">
               <button class="button-main">DETALLES</button>
-              <button class="button-main">AÑADIR AL CARRITO</button>
+              <button class="button-main" onclick="addToCartFromCard(4)">AÑADIR AL CARRITO</button>
+              <div class="qty-selector">
+                <button class="qty-btn-card" onclick="changeCardQty(4, -1)">-</button>
+                <span id="qty-4" class="qty-val-card">1</span>
+                <button class="qty-btn-card" onclick="changeCardQty(4, 1)">+</button>
+              </div>
             </div>
             <h4>cafetera Oster<br><span class="color-precio">S/100</span></h4>
           </div>
 
           <div class="carta">
             <img src="inicio/media/productos/ventilador.png" alt="ventilador">
+            <i class="uil uil-heart fav-icon" onclick="toggleFavorite(8)"></i>
             <div class="capa">
               <button class="button-main">DETALLES</button>
-              <button class="button-main">AÑADIR AL CARRITO</button>
+              <button class="button-main" onclick="addToCartFromCard(8)">AÑADIR AL CARRITO</button>
+              <div class="qty-selector">
+                <button class="qty-btn-card" onclick="changeCardQty(8, -1)">-</button>
+                <span id="qty-8" class="qty-val-card">1</span>
+                <button class="qty-btn-card" onclick="changeCardQty(8, 1)">+</button>
+              </div>
             </div>
             <h4>Ventilador Oster<br><span class="color-precio">S/188</span></h4>
           </div>
 
           <div class="carta">
             <img src="inicio/media/productos/televisor1.png" alt="televisor1">
+            <i class="uil uil-heart fav-icon" onclick="toggleFavorite(14)"></i>
             <div class="capa">
               <button class="button-main">DETALLES</button>
-              <button class="button-main">AÑADIR AL CARRITO</button>
+              <button class="button-main" onclick="addToCartFromCard(14)">AÑADIR AL CARRITO</button>
+              <div class="qty-selector">
+                <button class="qty-btn-card" onclick="changeCardQty(14, -1)">-</button>
+                <span id="qty-14" class="qty-val-card">1</span>
+                <button class="qty-btn-card" onclick="changeCardQty(14, 1)">+</button>
+              </div>
             </div>
             <h4>Televisor AOC<br><span class="color-precio">S/2250</span></h4>
           </div>
 
           <div class="carta">
             <img src="inicio/media/productos/refrigeradora1.png" alt="refrigeradora1">
+            <i class="uil uil-heart fav-icon" onclick="toggleFavorite(11)"></i>
+            <!-- This is Refrig LG in HTML, ID 11 is LG in JSON -->
             <div class="capa">
               <button class="button-main">DETALLES</button>
-              <button class="button-main">AÑADIR AL CARRITO</button>
+              <button class="button-main" onclick="addToCartFromCard(11)">AÑADIR AL CARRITO</button>
+              <div class="qty-selector">
+                <button class="qty-btn-card" onclick="changeCardQty(11, -1)">-</button>
+                <span id="qty-11" class="qty-val-card">1</span>
+                <button class="qty-btn-card" onclick="changeCardQty(11, 1)">+</button>
+              </div>
             </div>
             <h4>Refrigeradora LG<br><span class="color-precio">S/1420</span></h4>
           </div>
 
           <div class="carta">
             <img src="inicio/media/productos/cafetera1.png" alt="cafetera1">
+            <i class="uil uil-heart fav-icon" onclick="toggleFavorite(18)"></i>
+            <!-- Cafetera Mabe S/159. JSON ID 4 is Bosch. Need new ID 18 -->
             <div class="capa">
               <button class="button-main">DETALLES</button>
-              <button class="button-main">AÑADIR AL CARRITO</button>
+              <div class="qty-selector">
+                <button class="qty-btn-card" onclick="changeCardQty(18, -1)">-</button>
+                <span id="qty-18" class="qty-val-card">1</span>
+                <button class="qty-btn-card" onclick="changeCardQty(18, 1)">+</button>
+              </div>
+              <button class="button-main" onclick="addToCartFromCard(18)">AÑADIR AL CARRITO</button>
             </div>
             <h4>cafetera Mabe<br><span class="color-precio">S/159</span></h4>
           </div>
 
           <div class="carta">
             <img src="inicio/media/productos/televisor1.png" alt="televisor1">
+            <i class="uil uil-heart fav-icon" onclick="toggleFavorite(19)"></i>
+            <!-- TV Hyundai S/1300. JSON ID 2 is Hisense, 14 is AOC. Need new ID 19 -->
             <div class="capa">
               <button class="button-main">DETALLES</button>
-              <button class="button-main">AÑADIR AL CARRITO</button>
+              <div class="qty-selector">
+                <button class="qty-btn-card" onclick="changeCardQty(19, -1)">-</button>
+                <span id="qty-19" class="qty-val-card">1</span>
+                <button class="qty-btn-card" onclick="changeCardQty(19, 1)">+</button>
+              </div>
+              <button class="button-main" onclick="addToCartFromCard(19)">AÑADIR AL CARRITO</button>
             </div>
             <h4>Televisor Hyundai<br><span class="color-precio">S/1300</span></h4>
           </div>
 
           <div class="carta">
             <img src="inicio/media/productos/cocina1.png" alt="cocina1">
+            <i class="uil uil-heart fav-icon" onclick="toggleFavorite(5)"></i>
             <div class="capa">
               <button class="button-main">DETALLES</button>
-              <button class="button-main">AÑADIR AL CARRITO</button>
+              <div class="qty-selector">
+                <button class="qty-btn-card" onclick="changeCardQty(5, -1)">-</button>
+                <span id="qty-5" class="qty-val-card">1</span>
+                <button class="qty-btn-card" onclick="changeCardQty(5, 1)">+</button>
+              </div>
+              <button class="button-main" onclick="addToCartFromCard(5)">AÑADIR AL CARRITO</button>
             </div>
             <h4>Cocina Indurama<br><span class="color-precio">S/859</span></h4>
           </div>
-          
+
           <div class="carta">
             <img src="inicio/media/productos/licuadora.png" alt="licuadora">
+            <i class="uil uil-heart fav-icon" onclick="toggleFavorite(16)"></i>
             <div class="capa">
               <button class="button-main">DETALLES</button>
-              <button class="button-main">AÑADIR AL CARRITO</button>
+              <div class="qty-selector">
+                <button class="qty-btn-card" onclick="changeCardQty(16, -1)">-</button>
+                <span id="qty-16" class="qty-val-card">1</span>
+                <button class="qty-btn-card" onclick="changeCardQty(16, 1)">+</button>
+              </div>
+              <button class="button-main" onclick="addToCartFromCard(16)">AÑADIR AL CARRITO</button>
             </div>
             <h4>Licuadora Taurus<br><span class="color-precio">S/120</span></h4>
           </div>
-          
+
           <div class="carta">
             <img src="inicio/media/productos/refrigeradora1.png" alt="refrigeradora1">
+            <i class="uil uil-heart fav-icon" onclick="toggleFavorite(17)"></i>
             <div class="capa">
               <button class="button-main">DETALLES</button>
-              <button class="button-main">AÑADIR AL CARRITO</button>
+              <div class="qty-selector">
+                <button class="qty-btn-card" onclick="changeCardQty(17, -1)">-</button>
+                <span id="qty-17" class="qty-val-card">1</span>
+                <button class="qty-btn-card" onclick="changeCardQty(17, 1)">+</button>
+              </div>
+              <button class="button-main" onclick="addToCartFromCard(17)">AÑADIR AL CARRITO</button>
             </div>
             <h4>Refrigeradora Samsung<br><span class="color-precio">S/3500</span></h4>
           </div>
@@ -184,7 +280,8 @@
   <footer>
     <div id="final">
       <div class="container">
-        <div class="logo"><img src="inicio/media/Electrotec2.png" alt="electrotec" width="350px" height="120px"></div>
+        <div class="logo"><img src="inicio/media/Electrotec2.png" alt="electrotec" width="350px" height="120px">
+        </div>
         <article class="lista-final">
           <ul>
             <li class="lista">Link de interés</li>
@@ -231,6 +328,47 @@
     </div>
   </footer>
 
+
+
+  <!-- Ventana del chatbot -->
+
+
+  <!-- Overlay del Carrito -->
+  <div class="cart-overlay" id="cart-overlay" onclick="toggleCart()"></div>
+
+  <!-- Sidebar del Carrito -->
+  <div id="cart-sidebar">
+    <div class="cart-header">
+      <h3>Mi Carrito</h3>
+      <button class="close-cart" onclick="toggleCart()">×</button>
+    </div>
+    <div class="cart-items" id="cart-items-container">
+      <!-- Los items se inyectarán aquí con JS -->
+      <p style="text-align:center; padding:20px; color:#666;">Tu carrito está vacío.</p>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total:</span>
+        <span id="cart-total-price">S/0.00</span>
+      </div>
+      <button class="checkout-btn"
+        onclick="addMessage('ElectroBot', '¡El pago estará disponible pronto!', 'bot'); toggleCart();">PAGAR
+        AHORA</button>
+    </div>
+  </div>
+
+  <!-- Botón Flotante del Carrito -->
+  <div id="cart-icon-float" onclick="toggleCart()">
+    <i class="uil uil-shopping-cart"></i>
+    <span class="cart-badge" id="cart-badge">0</span>
+  </div>
+
+  <script src="chatBot_Modulos/productos.js"></script>
+  <script src="chatBot_Modulos/carrito.js"></script>
+  <script src="chatBot_Modulos/favoritos.js"></script>
+  <script src="chatBot_Modulos/comparador.js"></script>
+  <script src="chatBot_Modulos/chat_interfaz.js"></script>
+  <script src="chatBot_Modulos/chat_logica.js"></script>
 </body>
 
 </html>

@@ -1,14 +1,14 @@
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
-body{
+body {
   font-family: 'Playfair Display', serif;
   background-color: #f9fafa;
 }
@@ -18,24 +18,36 @@ body{
   --secundary-color: #a12332;
 }
 
-h2{ 
+h2 {
   font-size: 3em;
-  }
-h3 {
-   font-size: 3.5em;
 }
-h4 { 
+
+h3 {
+  font-size: 3.5em;
+}
+
+h4 {
   font-family: 'Crimson Text', cursive;
   font-size: 1.25em;
   color: var(--main-color);
 }
-p{ font-size: 1.25em;}
-ul{ list-style: none;}
-li{ font-size: 0.85em;}
-hr{
+
+p {
+  font-size: 1.25em;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  font-size: 0.85em;
+}
+
+hr {
   border: dashed;
   border-width: 1px;
-  border-color: rgba(0,0,0,0.2);
+  border-color: rgba(0, 0, 0, 0.2);
 }
 
 .button-main {
@@ -81,11 +93,11 @@ hr{
   padding: 12px 20px;
 }
 
-.container{
+.container {
   margin: auto;
 }
 
-header{
+header {
   background: rgba(255, 255, 255, .8);
   position: fixed;
   width: 100%;
@@ -251,7 +263,7 @@ nav .search {
   }
 }
 
-#portada{
+#portada {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -301,7 +313,7 @@ nav .search {
 #portada .button-portada::before {
   position: absolute;
   content: '';
-  background: linear-gradient(135deg,#e6f4ff,#e8f5ff 45%,#f6e7ff);
+  background: linear-gradient(135deg, #e6f4ff, #e8f5ff 45%, #f6e7ff);
   bottom: 0;
   right: 0;
   width: 0%;
@@ -316,33 +328,34 @@ nav .search {
 }
 
 #enciende {
-  background: linear-gradient(11.81deg,#f0dff6 0.3%,#fff 94.83%);
-  background: linear-gradient(-15deg,#e6f4ff,#e8f5ff 45%,#f6e7ff);
+  background: linear-gradient(11.81deg, #f0dff6 0.3%, #fff 94.83%);
+  background: linear-gradient(-15deg, #e6f4ff, #e8f5ff 45%, #f6e7ff);
 }
 
-#enciende .container{
+#enciende .container {
   text-align: center;
   padding: 100px 10px;
 }
 
-h2, h3{
+h2,
+h3 {
   color: transparent;
   background-color: #3c3f40;
   -webkit-background-clip: text;
   background-clip: text;
-  text-shadow: -4px 8px 7px rgba(255, 255, 255, 0.5); 
+  text-shadow: -4px 8px 7px rgba(255, 255, 255, 0.5);
 }
 
 .hr {
   padding: 1px 400px 1px 400px;
-  background: linear-gradient(135deg,#e6f4ff,#e8f5ff 64%,#f6e7ff);
+  background: linear-gradient(135deg, #e6f4ff, #e8f5ff 64%, #f6e7ff);
 }
 
-#electros-destacados{
-  background: linear-gradient(135deg,#e6f4ff,#e8f5ff 64%,#f6e7ff);
+#electros-destacados {
+  background: linear-gradient(135deg, #e6f4ff, #e8f5ff 64%, #f6e7ff);
 }
 
-#electros-destacados .container{
+#electros-destacados .container {
   padding: 50px 0px;
   width: 100%;
   height: 100%;
@@ -351,7 +364,7 @@ h2, h3{
   align-items: center;
 }
 
-#electros-destacados .destacados{
+#electros-destacados .destacados {
   padding: 50px 0px;
   display: grid;
   gap: 40px;
@@ -363,7 +376,7 @@ h2, h3{
   justify-content: space-evenly;
   align-items: center;
   gap: 80px;
-} 
+}
 
 .fotos-destacados {
   position: relative;
@@ -412,7 +425,7 @@ h2, h3{
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
-#electros-destacados .carta{
+#electros-destacados .carta {
   background: linear-gradient(45deg, white, rgba(153, 153, 153, 0.5));
   border: 1px solid var(--main-color);
   height: 40vh;
@@ -423,8 +436,8 @@ h2, h3{
   text-align: center;
 }
 
-.carta  {
-  position:relative;
+.carta {
+  position: relative;
   display: flex;
   flex-direction: column;
 }
@@ -446,7 +459,33 @@ h2, h3{
   border: 1px solid var(--main-color);
 }
 
-.carta img{
+.carta .fav-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  color: #ccc;
+  cursor: pointer;
+  z-index: 10;
+  transition: transform 0.2s, color 0.2s;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  padding: 5px;
+  line-height: 1;
+}
+
+.carta .fav-icon:hover {
+  transform: scale(1.1);
+  color: #ff4757;
+}
+
+.carta .fav-icon.fav-active {
+  color: #ff4757;
+  content: "\ebd0";
+  /* uil-heart is typically font icon, but color change is enough if it's solid/regular font toggle, or we just rely on color for now */
+}
+
+.carta img {
   width: 250px;
   height: 280px;
   object-fit: cover;
@@ -458,7 +497,7 @@ h2, h3{
   width: 50%;
 }
 
-.carta:hover > .capa {
+.carta:hover>.capa {
   opacity: 1;
   visibility: visible;
   display: flex;
@@ -469,24 +508,24 @@ h2, h3{
   padding-bottom: 30px;
 }
 
-.carta:hover > .capa button{
+.carta:hover>.capa button {
   width: 50%;
 }
 
-.carta:hover > img{
+.carta:hover>img {
   transition: .5s;
   transform: scale(0.9);
   background-size: cover;
 }
 
 .color-precio {
-  font-family:'Lato', sans-serif;
+  font-family: 'Lato', sans-serif;
   font-size: 0.85em;
   color: #212121;
 }
 
 .color-oferta {
-  font-family:'Lato', sans-serif;
+  font-family: 'Lato', sans-serif;
   text-decoration: line-through;
   font-size: 0.7em;
   font-weight: 400;
@@ -494,11 +533,11 @@ h2, h3{
   margin-left: 20px;
 }
 
-#electros-promociones{
-  background: linear-gradient(135deg,#e6f4ff,#e8f5ff 64%,#f6e7ff);
+#electros-promociones {
+  background: linear-gradient(135deg, #e6f4ff, #e8f5ff 64%, #f6e7ff);
 }
 
-#electros-promociones .container{
+#electros-promociones .container {
   width: 100%;
   padding: 50px 0px;
   text-align: center;
@@ -531,7 +570,7 @@ h2, h3{
   height: 50%;
   width: 50%;
   background-image: url("media/galeria-inicio/tienda.png");
-  transform: translate(0,0);
+  transform: translate(0, 0);
   transition: transform 0.5s linear;
 }
 
@@ -582,7 +621,7 @@ h2, h3{
   grid-template-columns: repeat(2, 1fr);
 }
 
-#electros-promociones .carta{
+#electros-promociones .carta {
   background: linear-gradient(45deg, white, rgba(153, 153, 153, 0.5));
   border: 1px solid var(--main-color);
   height: 40vh;
@@ -630,7 +669,7 @@ h2, h3{
   width: 100%;
   height: 100%;
   transform: scale(0.9);
-  
+
 }
 
 @keyframes rotate {
@@ -660,14 +699,14 @@ h2, h3{
 }
 
 #final {
-  background: linear-gradient(279.85deg,#fcf9eb,#f6e7d7 99.48%);
+  background: linear-gradient(279.85deg, #fcf9eb, #f6e7d7 99.48%);
 }
 
 #final .container {
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 #final .logo {
@@ -722,7 +761,7 @@ justify-content: center;
   left: 50%;
   width: 0%;
   height: 2px;
-  background: linear-gradient(90deg,#ff7a00,#ff0f00);
+  background: linear-gradient(90deg, #ff7a00, #ff0f00);
   transition: .25s ease-out;
 }
 
@@ -731,15 +770,15 @@ justify-content: center;
   width: 100%;
 }
 
-#redes{
-  background: linear-gradient(279.85deg,#fcf9eb,#f6e7d7 99.48%);
+#redes {
+  background: linear-gradient(279.85deg, #fcf9eb, #f6e7d7 99.48%);
   width: 100%;
   display: flex;
   align-items: center;
   padding: 0 0 40px 466px;
 }
 
-#redes a{
+#redes a {
   font-size: 1.25em;
   margin: 8px;
   color: #3c3f40;
@@ -750,7 +789,7 @@ justify-content: center;
 }
 
 #link-wsp {
-  background: linear-gradient(279.85deg,#fcf9eb,#f6e7d7 99.48%);
+  background: linear-gradient(279.85deg, #fcf9eb, #f6e7d7 99.48%);
 }
 
 #link-wsp .container {
@@ -807,7 +846,7 @@ justify-content: center;
   font-size: 1em;
 }
 
-#link-wsp .derechos{
+#link-wsp .derechos {
   text-align: center;
   padding-top: 20px;
   color: #3c3f40;
@@ -817,133 +856,567 @@ justify-content: center;
 /* parte chatbot */
 
 #chatbot-button {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    width: 60px;
-    height: 60px;
-    background: #005bbb;
-    border-radius: 50%;
-    box-shadow: 0 0 15px rgba(0,0,0,0.25);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    z-index: 999999;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 60px;
+  height: 60px;
+  background: #005bbb;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 999999;
 }
 
 .chatbot-icon {
-    width: 45px;
-    height: 45px;
-    object-fit: cover;
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
 }
 
 /* --- VENTANA DEL CHAT --- */
 .chatbot-container {
-    width: 350px;
-    height: 480px;
-    background: #f9fbff;
-    border-radius: 20px;
-    border: 3px solid #005bbb;
-    box-shadow: 0px 0px 20px rgba(0,0,0,0.25);
-    position: fixed;
-    bottom: 95px;
-    right: 25px;
-    display: none;  /* OCULTO AL INICIO */
-    flex-direction: column;
-    overflow: hidden;
-    animation: pop 0.3s ease;
-    z-index: 999998;
+  width: 340px;
+  height: 480px;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  bottom: 90px;
+  right: 25px;
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+  animation: pop 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  z-index: 999998;
+  font-family: 'Lato', sans-serif;
 }
 
 /* AnimaciÃ³n */
 @keyframes pop {
-    0% { transform: scale(0.6); opacity: 0; }
-    100% { transform: scale(1); opacity: 1; }
+  0% {
+    transform: scale(0.6) translateY(20px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
 }
 
 /* HEADER */
 .chat-header {
-    background: linear-gradient(90deg, #005bbb, #0080ff);
-    color: #fff;
-    padding: 12px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-    font-size: 18px;
-    font-weight: bold;
+  background: #005bbb;
+  color: #fff;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 700;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.chat-logo {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: white;
 }
 
 .close-chat {
-    background: transparent;
-    border: none;
-    color: white;
-    font-size: 18px;
-    cursor: pointer;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  line-height: 1;
 }
 
 /* BOTÃ“N DE NUEVA CONSULTA */
 .clear-btn {
-    background: #004c99;
-    color: white;
-    border: none;
-    padding: 8px;
-    cursor: pointer;
-    width: 100%;
-    font-size: 14px;
-    text-align: center;
+  background: #f0f7ff;
+  color: #005bbb;
+  border: none;
+  border-bottom: 1px solid #e1e1e1;
+  padding: 8px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 12px;
+  text-align: center;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.clear-btn:hover {
+  background: #e1efff;
+}
+
+/* CUERPO DEL CHAT */
+.chat-body {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  background: #f9fafa;
+  overscroll-behavior: contain;
+  /* Fix scroll propagation */
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Custom Scrollbar */
+.chat-body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat-body::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 3px;
 }
 
 /* AVATARES */
 .message {
-    display: flex;
-    gap: 10px;
-    margin: 10px 0;
+  display: flex;
+  gap: 10px;
+  align-items: flex-end;
 }
 
 .message img {
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #eee;
 }
 
 .bubble {
-    padding: 8px;
-    border-radius: 10px;
-    max-width: 70%;
+  padding: 10px 14px;
+  border-radius: 12px;
+  max-width: 80%;
+  font-size: 14px;
+  line-height: 1.4;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
 /* Cliente */
-.user .bubble {
-    background: #d0e7ff;
-    margin-left: auto;
+.message.user {
+  flex-direction: row-reverse;
+}
+
+.message.user .bubble {
+  background: #005bbb;
+  color: white;
+  border-bottom-right-radius: 2px;
 }
 
 /* Bot */
-.bot .bubble {
-    background: #eeeeee;
+.message.bot .bubble {
+  background: #ffffff;
+  color: #333;
+  border-bottom-left-radius: 2px;
+  border: 1px solid #e0e0e0;
 }
 
 /* INPUT */
 .chat-input {
-    display: flex;
-    border-top: 2px solid #ddd;
+  display: flex;
+  padding: 10px;
+  background: white;
+  border-top: 1px solid #eee;
+  gap: 8px;
 }
 
 .chat-input input {
-    flex: 1;
-    padding: 10px;
-    border: none;
-    outline: none;
-    font-size: 15px;
+  flex: 1;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  outline: none;
+  font-size: 14px;
+  transition: border-color 0.2s;
+}
+
+.chat-input input:focus {
+  border-color: #005bbb;
 }
 
 .chat-input button {
-    background: #005bbb;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    cursor: pointer;
-    font-weight: bold;
+  background: #005bbb;
+  color: white;
+  border: none;
+  padding: 0 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  transition: background 0.2s;
 }
+
+.chat-input button:hover {
+  background: #004494;
+}
+/* --- CARRITO SIDEBAR --- */
+#cart-icon-float {
+  position: fixed;
+  top: 90px;
+  right: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1000;
+  transition: transform 0.2s;
+}
+#cart-icon-float:hover { transform: scale(1.1); }
+#cart-icon-float i { font-size: 24px; color: #333; }
+.cart-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: #ff4757;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #fff;
+}
+#cart-sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 350px;
+  height: 100vh;
+  background: white;
+  box-shadow: -2px 0 15px rgba(0,0,0,0.1);
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+}
+#cart-sidebar.active { transform: translateX(0); }
+.cart-header {
+  padding: 20px;
+  background: #005bbb;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cart-header h3 { margin: 0; font-size: 18px; }
+.close-cart { background: none; border: none; color: white; font-size: 24px; cursor: pointer; }
+.cart-items { flex: 1; overflow-y: auto; padding: 15px; }
+.cart-item { display: flex; gap: 10px; border-bottom: 1px solid #eee; padding-bottom: 10px; margin-bottom: 10px; }
+.cart-item img { width: 60px; height: 60px; object-fit: contain; }
+.cart-item-details { flex: 1; }
+.cart-item-title { font-weight: bold; font-size: 14px; margin-bottom: 5px; display: block; }
+.cart-item-price { color: #666; font-size: 13px; }
+.cart-controls { display: flex; align-items: center; gap: 8px; margin-top: 5px; }
+.qty-btn { background: #eee; border: none; width: 24px; height: 24px; border-radius: 4px; cursor: pointer; font-weight: bold; }
+.cart-footer { padding: 20px; border-top: 1px solid #eee; background: #f9f9f9; }
+.cart-total { display: flex; justify-content: space-between; font-size: 18px; font-weight: bold; margin-bottom: 15px; }
+.checkout-btn { width: 100%; background: #27ae60; color: white; border: none; padding: 12px; border-radius: 6px; font-size: 16px; cursor: pointer; font-weight: bold; }
+.checkout-btn:hover { background: #219150; }
+.cart-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 1500;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.cart-overlay.active { display: block; opacity: 1; }
+
+
+/* --- CONTROLES DE CANTIDAD EN TARJETAS --- */
+.capa {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.qty-selector {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 5px 15px;
+  border-radius: 20px;
+  margin-bottom: 5px;
+}
+.qty-btn-card {
+  background: #0092E4;
+  color: white;
+  border: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+}
+.qty-btn-card:hover {
+  background: #007bb5;
+}
+.qty-val-card {
+  font-weight: bold;
+  color: #333;
+  font-size: 16px;
+  min-width: 20px;
+  text-align: center;
+}
+
+
+/* --- CORRECCIONES DE DISEÑO (FEEDBACK USUARIO) --- */
+
+/* 1. Posicionar iconos flotantes sin solaparse */
+#chatbot-button {
+  z-index: 3000 !important; /* Asegurar que esté encima */
+}
+#cart-icon-float {
+  top: auto !important;
+  bottom: 90px !important; /* Arriba del chatbot */
+  right: 20px !important;
+  z-index: 2900 !important;
+  background-color: #222 !important; /* Color oscuro para resaltar */
+  color: white !important;
+}
+#cart-icon-float i { color: white !important; }
+
+/* 2. Mejorar Diseño de Controles de Cantidad en Cartas */
+.capa {
+  justify-content: flex-end !important; /* Mover al fondo */
+  padding-bottom: 20px;
+  background: rgba(0, 59, 110, 0.9) !important; /* Fondo más elegante */
+}
+
+/* Selector de cantidad más estético */
+.qty-selector {
+  background: transparent !important;
+  border: 1px solid rgba(255,255,255,0.3);
+  margin-bottom: 15px !important;
+  padding: 5px 20px !important;
+}
+
+.qty-btn-card {
+  background: white !important;
+  color: #005bbb !important;
+  width: 30px !important;
+  height: 30px !important;
+  font-size: 18px !important;
+  transition: transform 0.2s;
+}
+.qty-btn-card:hover { transform: scale(1.1); }
+
+.qty-val-card {
+  color: white !important;
+  font-size: 18px !important;
+  margin: 0 10px;
+}
+
+.button-main {
+  margin-top: 0 !important; /* Quitar espacios extra */
+  font-weight: 700;
+}
+
+
+/* --- AJUSTES FINALES UI CARRITO Y CHATBOT --- */
+
+/* 1. Posicionamiento del Icono de Carrito */
+#cart-icon-float {
+  bottom: 120px !important; /* Más arriba para separar del Chatbot */
+  right: 25px !important;
+  width: 55px !important;
+  height: 55px !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3) !important;
+}
+.cart-badge {
+  top: -2px !important;
+  right: -2px !important;
+}
+
+/* 2. Chatbot Icono */
+#chatbot-button {
+  bottom: 30px !important;
+  right: 25px !important;
+}
+
+/* 3. Tarjetas de Productos (Asegurar controles abajo) */
+.capa {
+  height: 100%;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-end !important; /* EMPUJAR AL FONDO */
+  padding-bottom: 25px !important;
+  box-sizing: border-box;
+}
+
+.qty-selector {
+  margin-top: auto !important; /* Truco flex para empujar si justify falla */
+  margin-bottom: 10px !important;
+  background: rgba(255,255,255,0.15) !important;
+  border-radius: 25px !important;
+}
+
+/* 4. Sidebar Estilo 'Vista Aparte' */
+#cart-sidebar {
+  width: 400px !important; /* Un poco más ancho */
+  border-left: 1px solid #ddd;
+}
+.cart-header {
+  background: #fff !important;
+  color: #333 !important;
+  border-bottom: 1px solid #eee;
+}
+.cart-header h3 {
+  font-weight: 800;
+  font-size: 20px;
+}
+.close-cart {
+  color: #333 !important;
+  font-size: 28px !important;
+}
+.cart-item {
+  align-items: center;
+  padding: 15px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Tarjetas dentro del carrito */
+  margin-bottom: 15px;
+}
+.cart-footer {
+  background: #fff !important;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+  padding: 25px !important;
+}
+
+
+/* --- RE-AJUSTE DE LAYOUT TARJETAS (BOTONES CENTRO, QTY ABAJO) --- */
+
+.capa {
+  justify-content: center !important; /* Centrado vertical */
+  gap: 15px !important;
+  padding-bottom: 0 !important;
+}
+
+.qty-selector {
+  margin-top: 10px !important; /* Separar de los botones */
+  margin-bottom: 0 !important;
+}
+
+.button-main {
+  width: 70% !important; /* Unificar ancho */
+}
+
+
+/* --- RE-AJUSTE DE LAYOUT TARJETAS (BOTONES CENTRO, QTY ABAJO) --- */
+.capa {
+  justify-content: center !important;
+  gap: 15px !important;
+  padding-bottom: 0 !important;
+}
+.qty-selector {
+  margin-top: 10px !important;
+  margin-bottom: 0 !important;
+}
+.button-main {
+  width: 70% !important;
+}
+
+
+/* --- MOVER CARRITO ARRIBA --- */
+#cart-icon-float {
+  bottom: auto !important;
+  top: 110px !important; /* Debajo del header sticky */
+}
+
+
+/* --- TEMA PERSONALIZADO CARRITO (GOLD/ELECTROTEC) --- */
+#cart-sidebar {
+  border-left: 2px solid #d4af37 !important;
+  background-color: #fff !important; /* Fondo limpio */
+}
+.cart-header {
+  background-color: #d4af37 !important; /* Dorado principal */
+  color: white !important;
+  border-bottom: none !important;
+}
+.cart-header h3 {
+  color: white !important;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 1px;
+}
+.close-cart {
+  color: white !important;
+}
+.cart-footer {
+  background-color: #f9fafa !important;
+  border-top: 2px solid #d4af37 !important;
+}
+.checkout-btn {
+  background-color: #d4af37 !important;
+  color: white !important;
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+.checkout-btn:hover {
+  background-color: #bfa030 !important;
+  transform: scale(1.02);
+}
+.cart-badge {
+  background-color: #d4af37 !important; /* Badge dorado tmb o rojo? Rojo destaca más. */
+  background-color: #a12332 !important; /* Mejor rojo secundario */
+}
+
+
+/* --- TRANSICIÓN CHATBOT AL ABRIR CARRITO --- */
+#chatbot-button {
+  transition: right 0.3s ease-in-out !important;
+}
+body.cart-open #chatbot-button {
+  right: 430px !important; /* Mover a la izquierda del sidebar */
+}
+
+
+/* --- DETALLES DE INTERACCIÓN AL ABRIR CARRITO --- */
+
+/* 1. Ocultar el icono flotante del carrito cuando el sidebar está abierto */
+body.cart-open #cart-icon-float {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transform: scale(0);
+  transition: all 0.3s ease;
+}
+
+/* 2. Empujar también la VENTANA del Chatbot */
+#chatbot-container {
+  transition: right 0.3s ease-in-out !important;
+}
+body.cart-open #chatbot-container {
+  right: 430px !important;
+}
+

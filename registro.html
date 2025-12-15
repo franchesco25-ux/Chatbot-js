@@ -36,7 +36,7 @@
   </header>
 
 
-  
+
   <section id="slides-mi-cuenta">
     <div class="container">
       <ul class="slides">
@@ -107,7 +107,7 @@
                       </select>
                     </div>
                     <div class="inputBox">
-                      <input type="number" placeholder="Documento" >
+                      <input type="number" placeholder="Documento">
                     </div>
                     <div class="inputBox">
                       <input type="submit" value="Crear cuenta">
@@ -172,7 +172,8 @@
   <footer>
     <div id="final">
       <div class="container">
-        <div class="logo"><img src="inicio/media/Electrotec2.png" alt="electrotec" width="350px" height="120px"></div>
+        <div class="logo"><img src="inicio/media/Electrotec2.png" alt="electrotec" width="350px" height="120px">
+        </div>
         <article class="lista-final">
           <ul>
             <li class="lista">Link de interés</li>
@@ -281,16 +282,16 @@
         const result = await response.json();
 
         if (response.ok) {
-            mensajeEl.style.color = 'lightgreen';
-            mensajeEl.textContent = result.message + ' Redirigiendo...';
+          mensajeEl.style.color = 'lightgreen';
+          mensajeEl.textContent = result.message + ' Redirigiendo...';
 
-            // 1. Guardar la información del usuario en el almacenamiento local del navegador
-            localStorage.setItem('usuario', JSON.stringify({ nombreUsuario: result.nombreUsuario }));
+          // 1. Guardar la información del usuario en el almacenamiento local del navegador
+          localStorage.setItem('usuario', JSON.stringify({ nombreUsuario: result.nombreUsuario }));
 
-            // 2. Redirigir a la página principal después de 1.5 segundos
-            setTimeout(() => {
-                window.location.href = 'index.html';
-            }, 1500);
+          // 2. Redirigir a la página principal después de 1.5 segundos
+          setTimeout(() => {
+            window.location.href = 'index.html';
+          }, 1500);
         } else {
           mensajeEl.style.color = 'orangered';
           mensajeEl.textContent = 'Error: ' + result.message;

@@ -1,7 +1,276 @@
- [
-    {"nombre": "Lavadora Samsung 14kg", "precio": 1299},
-    {"nombre": "Refrigeradora LG 360L", "precio": 1899},
-    {"nombre": "Televisor LG 55\"", "precio": 1599}
-
+[
+    {
+        "id": 1,
+        "nombre": "Licuadora Oster",
+        "marca": "Oster",
+        "categoria": "Electrodomésticos",
+        "precio": 600,
+        "promocion": false,
+        "imagen": "inicio/media/productos/licuadora.png",
+        "caracteristicas": {
+            "Potencia": "600W",
+            "Velocidades": "3",
+            "Capacidad": "1.5L"
+        }
+    },
+    {
+        "id": 2,
+        "nombre": "Televisor Hisense",
+        "marca": "Hisense",
+        "categoria": "Televisores",
+        "precio": 1200,
+        "promocion": false,
+        "imagen": "inicio/media/productos/televisor1.png",
+        "caracteristicas": {
+            "Pantalla": "55 pulgadas",
+            "Resolución": "4K UHD",
+            "Smart TV": "Sí"
+        }
+    },
+    {
+        "id": 3,
+        "nombre": "Ventilador Imaco",
+        "marca": "Imaco",
+        "categoria": "Climatización",
+        "precio": 200.50,
+        "promocion": false,
+        "imagen": "inicio/media/productos/ventilador1.png",
+        "caracteristicas": {
+            "Tipo": "Pedestal",
+            "Velocidades": "3",
+            "Temporizador": "No"
+        }
+    },
+    {
+        "id": 4,
+        "nombre": "Cafetera Bosch",
+        "marca": "Bosch",
+        "categoria": "Electrodomésticos",
+        "precio": 119.40,
+        "promocion": false,
+        "imagen": "inicio/media/productos/cafetera1.png",
+        "caracteristicas": {
+            "Capacidad": "12 tazas",
+            "Filtro": "Permanente",
+            "Color": "Negro"
+        }
+    },
+    {
+        "id": 5,
+        "nombre": "Cocina Indurama",
+        "marca": "Indurama",
+        "categoria": "Cocina",
+        "precio": 999.10,
+        "precioPromocion": 800.29,
+        "promocion": true,
+        "vigencia": "2025-12-31",
+        "imagen": "inicio/media/productos/cocina1.png",
+        "caracteristicas": {
+            "Quemadores": "4",
+            "Encendido": "Eléctrico",
+            "Horno": "Sí"
+        }
+    },
+    {
+        "id": 6,
+        "nombre": "Aspiradora Bosch",
+        "marca": "Bosch",
+        "categoria": "Limpieza",
+        "precio": 475,
+        "precioPromocion": 350,
+        "promocion": true,
+        "vigencia": "2025-12-31",
+        "imagen": "inicio/media/productos/aspiradora1.png",
+        "caracteristicas": {
+            "Potencia": "1800W",
+            "Bolsa": "Reutilizable",
+            "Accesorios": "3"
+        }
+    },
+    {
+        "id": 7,
+        "nombre": "Refrigeradora Mabe",
+        "marca": "Mabe",
+        "categoria": "Refrigeración",
+        "precio": 2800,
+        "precioPromocion": 1100,
+        "promocion": true,
+        "vigencia": "2025-12-31",
+        "imagen": "inicio/media/productos/refrigeradora1.png",
+        "caracteristicas": {
+            "Capacidad": "360L",
+            "Tecnología": "No Frost",
+            "Dispensador": "Agua"
+        }
+    },
+    {
+        "id": 8,
+        "nombre": "Ventilador Oster",
+        "marca": "Oster",
+        "categoria": "Climatización",
+        "precio": 247,
+        "precioPromocion": 150.30,
+        "promocion": true,
+        "vigencia": "2025-06-30",
+        "imagen": "inicio/media/productos/ventilador.png",
+        "caracteristicas": {
+            "Tipo": "Torre",
+            "Control Remoto": "Sí",
+            "Oscilación": "90°"
+        }
+    },
+    {
+        "id": 9,
+        "nombre": "Cocina Mabe",
+        "marca": "Mabe",
+        "categoria": "Cocina",
+        "precio": 2300,
+        "promocion": false,
+        "imagen": "inicio/media/productos/cocina2.png",
+        "caracteristicas": {
+            "Quemadores": "5",
+            "Material": "Acero Inoxidable",
+            "Parrillas": "Hierro fundido"
+        }
+    },
+    {
+        "id": 10,
+        "nombre": "Licuadora Philips",
+        "marca": "Philips",
+        "categoria": "Electrodomésticos",
+        "precio": 259,
+        "promocion": false,
+        "imagen": "inicio/media/productos/licuadora2.png",
+        "caracteristicas": {
+            "Potencia": "700W",
+            "Cuchillas": "Acero",
+            "Vaso": "Vidrio"
+        }
+    },
+    {
+        "id": 11,
+        "nombre": "Refrigeradora LG",
+        "marca": "LG",
+        "categoria": "Refrigeración",
+        "precio": 3500,
+        "promocion": false,
+        "imagen": "inicio/media/productos/refrigeradora1.png",
+        "caracteristicas": {
+            "Capacidad": "500L",
+            "Inverter": "Sí",
+            "Smart Diagnosis": "Sí"
+        }
+    },
+    {
+        "id": 12,
+        "nombre": "Ventilador Panasonic",
+        "marca": "Panasonic",
+        "categoria": "Climatización",
+        "precio": 280,
+        "promocion": false,
+        "imagen": "inicio/media/productos/ventilador1.png",
+        "caracteristicas": {
+            "Tipo": "Mesa",
+            "Silencioso": "Sí",
+            "Garantía": "2 años"
+        }
+    },
+    {
+        "id": 13,
+        "nombre": "Aspiradora Imaco",
+        "marca": "Imaco",
+        "categoria": "Limpieza",
+        "precio": 195,
+        "promocion": false,
+        "imagen": "inicio/media/productos/aspiradora1.png",
+        "caracteristicas": {
+            "Potencia": "1400W",
+            "Cable": "Retráctil",
+            "Filtro": "HEPA"
+        }
+    },
+    {
+        "id": 14,
+        "nombre": "Televisor AOC",
+        "marca": "AOC",
+        "categoria": "Televisores",
+        "precio": 2250,
+        "promocion": false,
+        "imagen": "inicio/media/productos/televisor1.png",
+        "caracteristicas": {
+            "Pantalla": "65 pulgadas",
+            "Sistema": "Roku TV",
+            "HDR": "Sí"
+        }
+    },
+    {
+        "id": 15,
+        "nombre": "Aspiradora Taurus",
+        "marca": "Taurus",
+        "categoria": "Limpieza",
+        "precio": 330,
+        "promocion": false,
+        "imagen": "inicio/media/productos/aspiradora1.png",
+        "caracteristicas": {
+            "Potencia": "1600W",
+            "Tipo": "Trineo",
+            "Bolsa": "Sí"
+        }
+    },
+    {
+        "id": 16,
+        "nombre": "Licuadora Taurus",
+        "marca": "Taurus",
+        "categoria": "Electrodomésticos",
+        "precio": 120,
+        "promocion": false,
+        "imagen": "inicio/media/productos/licuadora.png",
+        "caracteristicas": {
+            "Potencia": "500W",
+            "Velocidades": "2",
+            "Vaso": "Plástico"
+        }
+    },
+    {
+        "id": 17,
+        "nombre": "Refrigeradora Samsung",
+        "marca": "Samsung",
+        "categoria": "Refrigeración",
+        "precio": 3500,
+        "promocion": false,
+        "imagen": "inicio/media/productos/refrigeradora1.png",
+        "caracteristicas": {
+            "Capacidad": "400L",
+            "Tecnología": "Twin Cooling",
+            "Dispensador": "Sí"
+        }
+    },
+    {
+        "id": 18,
+        "nombre": "Cafetera Mabe",
+        "marca": "Mabe",
+        "categoria": "Electrodomésticos",
+        "precio": 159,
+        "promocion": false,
+        "imagen": "inicio/media/productos/cafetera1.png",
+        "caracteristicas": {
+            "Capacidad": "1.2L",
+            "Filtro": "Lavable",
+            "Anti-goteo": "Sí"
+        }
+    },
+    {
+        "id": 19,
+        "nombre": "Televisor Hyundai",
+        "marca": "Hyundai",
+        "categoria": "Televisores",
+        "precio": 1300,
+        "promocion": false,
+        "imagen": "inicio/media/productos/televisor1.png",
+        "caracteristicas": {
+            "Pantalla": "50 pulgadas",
+            "Resolución": "4K",
+            "Smart TV": "Sí"
+        }
+    }
 ]
-
