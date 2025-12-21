@@ -1,5 +1,5 @@
 // server.js
-
+/*
 const express = require('express');
 const mysql = require('mysql2/promise'); // Cambiamos mssql por mysql2/promise
 const bcrypt = require('bcryptjs');
@@ -90,11 +90,21 @@ app.post('/api/login', async (req, res) => {
         console.error(error);
         res.status(500).json({ message: 'Error en el servidor al iniciar sesión.' });
     }
+});*/
+
+const express = require("express");
+const path = require("path");
+
+const app = express();
+
+// 👇 sirve TODA la raíz como archivos estáticos
+app.use(express.static(path.join(__dirname)));
+
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "index.html"));
 });
 
-
-// Iniciar el servidor
-const PORT = process.env.PORT || 3000;
+const PORT = 3000;
 app.listen(PORT, () => {
-    console.log(`Servidor corriendo en http://localhost:${PORT}`);
+  console.log(`Servidor activo en http://localhost:${PORT}`);
 });

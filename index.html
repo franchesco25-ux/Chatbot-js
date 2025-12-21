@@ -254,31 +254,19 @@
         <button onclick="sendMessage()">Enviar</button>
     </div>
 </div>
-<script src="chatbot.js"></script>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const cuentaLink = document.getElementById('cuenta-link');
-      const datosUsuario = localStorage.getItem('usuario');
-
-      if (datosUsuario) {
-        const usuario = JSON.parse(datosUsuario);
-        // Cambia el contenido del enlace "Mi Cuenta"
-        cuentaLink.innerHTML = `
-          <i class="uil uil-user-check"></i>Hola, ${usuario.nombreUsuario}
-          <a href="#" id="logout-link" style="font-size: 0.8em; margin-left: 15px; text-decoration: underline;">(Cerrar sesión)</a>
-        `;
-        cuentaLink.href = '#'; // Evita que redirija a registro.html
-
-        // Añade la funcionalidad de cerrar sesión
-        document.getElementById('logout-link').addEventListener('click', (e) => {
-          e.preventDefault();
-          localStorage.removeItem('usuario'); // Limpia los datos del usuario
-          window.location.reload(); // Recarga la página para volver al estado inicial
-        });
-      }
-    });
-  </script>
+<script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "3b647bf7-8c16-4376-8da1-cb14ba1076f2", // The ID of this integration.
+    region: "us-south", // The region your integration is hosted in.
+    serviceInstanceID: "866b92b4-4b90-46c7-940f-8edd35a9c26e", // The ID of your service instance.
+    onLoad: async (instance) => { await instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>
 
   <footer>
     <div id="final">
